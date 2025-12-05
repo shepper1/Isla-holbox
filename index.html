@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holbox, l'Éden Caraïbe aux Merveilles Secrètes </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        template: {
+                            sable: '#F3E5AB',
+                            ocre: '#C66B3D',
+                            roche: '#2D2A26',
+                            ciel: '#4A6C6F',
+                            bg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #C66B3D;
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">Holbox, l'Éden Caraïbe aux Merveilles Secrètes</a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Holbox : Douce Immersion Insulaire</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Plages de Rêve et Découverte du Village</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Aventure Marine : L'Excursion des Trois Îles</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Détente et Exploration Artistique</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Nager avec les Géants : Rencontre avec les Requins-Baleines (saisonnier)</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Kayak dans la Mangrove et Coucher de Soleil Magique</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Journée Libre et Magie Nocturne : Bioluminescence</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Derniers Instants de Sérénité et Préparatifs</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Départ de l'Île Paradisiaque</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-12 md:pt-0">
+        
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+        <video autoplay muted loop playsinline 
+               poster="https://images.unsplash.com/photo-1579606946838-6db34433f3c0?q=80&w=2070"
+               class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/4456988/4456988-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.3em] mb-4 uppercase text-sm font-semibold">Feuille de Route</p>
+            <h1 class="font-Playfair italic text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">Isla holbox</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed">Holbox, l'Éden Caraïbe aux Merveilles Secrètes</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🗓️ 9 jours</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">💰 3000€ / pers</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🛬 Environ 11h de vol + 2h30 de transferts depuis Paris</span>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-20 relative">
+        
+        <div class="text-center mb-16">
+            <span class="text-template-ocre font-bold tracking-widest text-xs uppercase">Le Roadtrip</span>
+            <h2 class="font-serif text-4xl mt-2 text-template-roche">Votre Programme</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Holbox : Douce Immersion Insulaire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage depuis Paris, vous atteignez enfin l'île de Holbox, un havre de paix sans voitures. Le temps de vous installer et de prendre vos marques, profitez d'une première balade pour sentir l'ambiance décontractée et les charmes de cette île paradisiaque.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛬 <strong>Arrivée et Transfert</strong>: Atterrissez à Cancún, puis un transfert confortable vous mène à Chiquilá, d'où un court ferry vous dépose sur l'île de Holbox, loin du tumulte continental.</li>
+                            
+                                <li>🛏️ <strong>Installation à l'Hôtel</strong>: Prenez possession de votre hébergement. Les hôtels de Holbox offrent souvent une ambiance bohème et relaxante, parfaite pour décompresser après le voyage.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Transfert</p>
+                                <p class="text-gray-700">De Cancún à Chiquilá, optez pour un transfert privé ou partagé pour plus de confort. Le ferry est le seul moyen d'accéder à l'île.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Sur l'île</p>
+                                <p class="text-gray-700">Il n'y a pas de voitures à Holbox, seulement des voiturettes de golf et des vélos. Préparez-vous à marcher ou à louer un moyen de transport local.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Plages de Rêve et Découverte du Village</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Commencez votre exploration de Holbox par ses plages emblématiques, où le sable blanc et les eaux turquoise invitent à la détente. L'après-midi, perdez-vous dans les rues colorées du village, imprégnées d'une atmosphère bohème et artistique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♀️ <strong>Balade vers Punta Cocos</strong>: Louez un vélo ou marchez le long de la plage jusqu'à Punta Cocos, un endroit idyllique pour se baigner dans des eaux calmes et admirer les flamants roses (selon la saison).</li>
+                            
+                                <li>🍽️ <strong>Déjeuner au Cœur du Village</strong>: Savourez des tacos de poisson frais ou une ceviche dans l'un des restaurants locaux. Le centre de Holbox regorge de petites adresses charmantes.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚲 Location de vélos</p>
+                                <p class="text-gray-700">La location de vélos est le moyen idéal pour explorer l'île à votre rythme. De nombreux points de location sont disponibles dans le village.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil est intense, n'oubliez pas votre crème solaire biodégradable, un chapeau et des lunettes de soleil pour toutes vos activités en extérieur.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure Marine : L'Excursion des Trois Îles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une excursion inoubliable à travers les trésors naturels de Holbox. Découvrez des îles vierges, des cenotes rafraîchissants et une faune aviaire riche, offrant un aperçu de la biodiversité exceptionnelle de la région.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛥️ <strong>Excursion en Bateau aux Trois Îles</strong>: Partez en bateau pour visiter Isla Pájaros (île aux oiseaux), Isla Pasión (île de la passion) pour ses plages isolées, et le Cenote Yalahau, une source d'eau douce naturelle.</li>
+                            
+                                <li>🏊‍♀️ <strong>Baignade au Cenote Yalahau</strong>: Plongez dans les eaux cristallines et rafraîchissantes de ce cenote à ciel ouvert, réputé pour ses propriétés vivifiantes et son cadre luxuriant.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐦 Observation</p>
+                                <p class="text-gray-700">Isla Pájaros est un sanctuaire pour de nombreuses espèces d'oiseaux, dont les flamants roses. N'oubliez pas vos jumelles pour les observer de près.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Eau douce</p>
+                                <p class="text-gray-700">Le Cenote Yalahau est une source d'eau douce. Pensez à rincer votre peau après la baignade pour éliminer le sel de mer.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente et Exploration Artistique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les aventures marines, accordez-vous une journée plus calme pour vous imprégner de l'atmosphère unique de Holbox. Profitez des plages pour vous reposer, explorez l'art de rue vibrant et découvrez la vie locale à travers ses saveurs et ses artisans.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🎨 <strong>Découverte du Street Art de Holbox</strong>: Flânez dans les rues du village pour admirer les nombreuses fresques murales colorées qui racontent l'histoire et la culture de l'île. Chaque coin de rue est une galerie à ciel ouvert.</li>
+                            
+                                <li>🍹 <strong>Cours de Cuisine Mexicaine</strong>: Participez à un atelier pour apprendre à préparer des plats typiques de la région. Une expérience gourmande et conviviale pour ramener un peu du Mexique chez vous.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🖼️ Art mural</p>
+                                <p class="text-gray-700">Les fresques murales de Holbox sont une véritable attraction. Elles sont souvent inspirées par la nature, la culture maya et la vie marine.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Saveurs locales</p>
+                                <p class="text-gray-700">N'hésitez pas à goûter les spécialités locales comme le 'cochinita pibil' ou les 'marquesitas', une sorte de crêpe croustillante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nager avec les Géants : Rencontre avec les Requins-Baleines (saisonnier)</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Vivez une expérience extraordinaire en nageant aux côtés des majestueux requins-baleines, les plus grands poissons du monde. Cette rencontre respectueuse avec la faune marine est un moment fort, suivi d'une exploration des fonds marins colorés de la région.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🦈 <strong>Excursion Nage avec les Requins-Baleines</strong>: Partez en bateau pour une journée inoubliable à la rencontre de ces doux géants. Nagez en snorkeling à leurs côtés dans le respect de leur environnement (saison de juin à septembre).</li>
+                            
+                                <li>🐠 <strong>Snorkeling dans les Récifs Coralliens</strong>: Après l'excitation de la nage avec les requins-baleines, explorez les récifs coralliens voisins, riches en poissons tropicaux et en vie marine colorée.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Saisonnalité</p>
+                                <p class="text-gray-700">L'excursion avec les requins-baleines n'est possible que de juin à septembre. Si vous voyagez hors saison, une alternative pourrait être la pêche sportive ou une autre excursion marine.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">♻️ Éco-responsabilité</p>
+                                <p class="text-gray-700">Choisissez des opérateurs respectueux de l'environnement et de la vie marine. N'utilisez pas de crème solaire non biodégradable avant de nager.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Kayak dans la Mangrove et Coucher de Soleil Magique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez la biodiversité unique de la mangrove de Holbox en kayak, une activité paisible qui vous rapproche de la nature. Terminez la journée en beauté en admirant un coucher de soleil spectaculaire, un rituel incontournable sur l'île.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚣‍♀️ <strong>Exploration en Kayak de la Mangrove</strong>: Pagayez silencieusement à travers les tunnels de mangrove, un écosystème vital abritant oiseaux, crocodiles et autres créatures. Une immersion totale dans la nature.</li>
+                            
+                                <li>🌅 <strong>Coucher de Soleil à Punta Cocos</strong>: Rendez-vous à Punta Cocos en fin de journée pour assister à un coucher de soleil époustouflant, où le ciel s'embrase de couleurs vives, reflétées sur les eaux calmes.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Moustiques</p>
+                                <p class="text-gray-700">La mangrove est un habitat pour les moustiques. Prévoyez un répulsif naturel, surtout en fin de journée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les couchers de soleil à Holbox sont légendaires. N'oubliez pas votre appareil photo pour immortaliser ce spectacle naturel.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Libre et Magie Nocturne : Bioluminescence</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée de détente totale, à votre rythme. Que ce soit sur la plage, au bord de la piscine ou en explorant les boutiques, rechargez vos batteries avant de vivre une expérience nocturne féerique : la bioluminescence, un phénomène naturel éblouissant.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛍️ <strong>Shopping et Détente au Village</strong>: Flânez dans les petites boutiques de souvenirs, trouvez des objets artisanaux uniques ou sirotez un cocktail frais dans un hamac. Profitez de l'ambiance décontractée de l'île.</li>
+                            
+                                <li>✨ <strong>Tour de Bioluminescence en Soirée</strong>: À la tombée de la nuit, partez en kayak ou en voiturette de golf vers des plages isolées. Plongez dans l'eau et observez le plancton lumineux s'illuminer à chaque mouvement, créant un spectacle magique.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌙 Conditions idéales</p>
+                                <p class="text-gray-700">La bioluminescence est plus visible les nuits sans lune. Renseignez-vous sur le calendrier lunaire avant de planifier cette activité.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚫 Photos</p>
+                                <p class="text-gray-700">Il est très difficile de photographier la bioluminescence sans équipement professionnel. Mieux vaut profiter du moment présent.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Instants de Sérénité et Préparatifs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète sur l'île pour savourer une dernière fois ses charmes. Que ce soit en vous prélassant sur la plage, en vous offrant un massage relaxant ou en dégustant un dernier repas mémorable, imprégnez-vous de l'esprit de Holbox avant votre départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>💆‍♀️ <strong>Matinée Détente et Plage</strong>: Passez la matinée à vous détendre sur la plage principale, à vous baigner dans les eaux chaudes ou à profiter d'un massage en plein air. Laissez-vous bercer par le son des vagues.</li>
+                            
+                                <li>🎁 <strong>Achats de Souvenirs et Dîner d'Adieu</strong>: Procurez-vous les derniers souvenirs artisanaux et savourez un dîner d'adieu dans l'un des restaurants de fruits de mer frais de l'île, avec vue sur la mer.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💸 Monnaie locale</p>
+                                <p class="text-gray-700">La monnaie est le peso mexicain (MXN). Les cartes de crédit sont acceptées dans la plupart des établissements, mais avoir du liquide est toujours utile pour les petits commerces.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">L'espagnol est la langue officielle. Apprendre quelques mots de base comme 'Hola' ou 'Gracias' sera très apprécié.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de l'Île Paradisiaque</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Il est temps de quitter Holbox, mais les souvenirs de ses plages immaculées, de ses couchers de soleil flamboyants et de ses rencontres avec la nature resteront gravés. Reprenez le chemin inverse, le cœur rempli d'images et d'expériences inoubliables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚢 <strong>Transfert Holbox - Chiquilá - Cancún</strong>: Prenez le ferry de retour vers Chiquilá, puis un transfert terrestre vous mènera directement à l'aéroport international de Cancún pour votre vol retour.</li>
+                            
+                                <li>✈️ <strong>Vol Retour vers Paris</strong>: Embarquez pour votre vol international, la tête pleine de souvenirs de votre escapade paradisiaque à Holbox.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Isla-holbox/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Timing</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le transfert et l'enregistrement à l'aéroport de Cancún, car le trajet depuis Holbox peut prendre plusieurs heures.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧳 Bagages</p>
+                                <p class="text-gray-700">Les chemins sablonneux de Holbox ne sont pas toujours adaptés aux valises à roulettes. Un sac à dos ou une valise souple peut être plus pratique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer id="pratique" class="bg-white border-t border-gray-200 pt-16 pb-10 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget vol: </strong>1000€/pers (Vol A/R Paris-Cancún, classe économique, hors saison)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget transports: </strong>200€/pers (Transferts A/R Cancún-Chiquilá-Holbox, ferry, transports locaux)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget repas: </strong>450€/pers (Environ 50€/jour pour 9 jours, repas variés, hors boissons alcoolisées)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget logement: </strong>1000€/pers (8 nuits en hôtel de charme/boutique, base chambre double)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget activités: </strong>350€/pers (Excursion 3 îles, requin-baleine, bioluminescence, kayak, vélo)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Les périodes idéales pour ce séjour sont les mois d'Avril et Mai pour un climat agréable et de Juin à Septembre pour l'observation des requins-baleines.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>🧳</span> À savoir
+                </h4>
+                <ul class="text-sm text-gray-600 space-y-3">
+
+                        <li><strong>☀️ :</strong> Le climat est tropical. Prévoyez des vêtements légers, un maillot de bain, un chapeau, des lunettes de soleil et de la crème solaire biodégradable.</li>
+                    
+                        <li><strong>💳 :</strong> La monnaie est le peso mexicain (MXN). Les cartes bancaires sont acceptées mais avoir du liquide est utile pour les petits commerces et les pourboires.</li>
+                    
+                        <li><strong>💧 :</strong> L'eau du robinet n'est pas potable. Buvez uniquement de l'eau en bouteille. Évitez les glaçons si vous avez un estomac sensible.</li>
+                    
+                        <li><strong>🔌 :</strong> Un adaptateur de type A/B (prises américaines) est nécessaire pour vos appareils électroniques. Le voltage est de 127V.</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2"><span>🔗</span> Liens Utiles</h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://shepper1.github.io/Isla holbox/map.html" target="_blank" class="hover:underline flex items-center gap-2"><strong>🗺️ Carte</strong></a></li>
+                    
+                        <li><a href="https://www.visitmexico.com/fr" target="_blank" class="hover:underline flex items-center gap-2"><strong>📘 Visit Mexico</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/mx/holbox/235889/weather-forecast/235889" target="_blank" class="hover:underline flex items-center gap-2"><strong>🌤️ Météo Holbox</strong></a></li>
+                    
+                        <li><a href="https://www.9hermanos.com.mx/" target="_blank" class="hover:underline flex items-center gap-2"><strong>🚢 9 Hermanos Ferry</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-100 pt-8">
+            <p class="font-serif text-2xl text-template-roche mb-2">Isla holbox</p>
+            <p class="text-xs text-gray-400">© 2025 - Roadmap</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Gestion de l'affichage du menu au scroll
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // 2. Détection de l'étape active
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+
+                    document.querySelectorAll('.nav-item-desktop').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (activeId.includes('jour') && linkHref === 'jour-1') {
+                            link.classList.add('text-template-ocre');
+                        } else if (activeId === 'pratique' && linkHref === 'pratique') {
+                            link.classList.add('text-template-ocre');
+                        } else {
+                            link.classList.remove('text-template-ocre');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('div[id^="jour-"], footer#pratique').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
