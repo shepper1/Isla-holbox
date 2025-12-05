@@ -1,0 +1,298 @@
+{
+  "pays": "Mexique",
+  "drapeau": "🇲🇽",
+  "symbole": "🌴",
+  "titre": "Holbox, l'Éden Caraïbe aux Merveilles Secrètes",
+  "budget_total": "3000€",
+  "duree": "9 jours",
+  "temps_vol": "Environ 11h de vol + 2h30 de transferts",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Holbox : Douce Immersion Insulaire",
+      "legende": "Après un long voyage depuis Paris, vous atteignez enfin l'île de Holbox, un havre de paix sans voitures. Le temps de vous installer et de prendre vos marques, profitez d'une première balade pour sentir l'ambiance décontractée et les charmes de cette île paradisiaque.",
+      "lieu": "Isla Holbox",
+      "activites": [
+        "🛬 <strong>Arrivée et Transfert</strong>: Atterrissez à Cancún, puis un transfert confortable vous mène à Chiquilá, d'où un court ferry vous dépose sur l'île de Holbox, loin du tumulte continental.",
+        "🛏️ <strong>Installation à l'Hôtel</strong>: Prenez possession de votre hébergement. Les hôtels de Holbox offrent souvent une ambiance bohème et relaxante, parfaite pour décompresser après le voyage."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Transfert",
+          "texte": "De Cancún à Chiquilá, optez pour un transfert privé ou partagé pour plus de confort. Le ferry est le seul moyen d'accéder à l'île."
+        },
+        {
+          "symbole": "🚗",
+          "titre": "Sur l'île",
+          "texte": "Il n'y a pas de voitures à Holbox, seulement des voiturettes de golf et des vélos. Préparez-vous à marcher ou à louer un moyen de transport local."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏖️",
+      "titre": "Plages de Rêve et Découverte du Village",
+      "legende": "Commencez votre exploration de Holbox par ses plages emblématiques, où le sable blanc et les eaux turquoise invitent à la détente. L'après-midi, perdez-vous dans les rues colorées du village, imprégnées d'une atmosphère bohème et artistique.",
+      "lieu": "Isla Holbox",
+      "activites": [
+        "🚶‍♀️ <strong>Balade vers Punta Cocos</strong>: Louez un vélo ou marchez le long de la plage jusqu'à Punta Cocos, un endroit idyllique pour se baigner dans des eaux calmes et admirer les flamants roses (selon la saison).",
+        "🍽️ <strong>Déjeuner au Cœur du Village</strong>: Savourez des tacos de poisson frais ou une ceviche dans l'un des restaurants locaux. Le centre de Holbox regorge de petites adresses charmantes."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🚲",
+          "titre": "Location de vélos",
+          "texte": "La location de vélos est le moyen idéal pour explorer l'île à votre rythme. De nombreux points de location sont disponibles dans le village."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est intense, n'oubliez pas votre crème solaire biodégradable, un chapeau et des lunettes de soleil pour toutes vos activités en extérieur."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🚤",
+      "titre": "Aventure Marine : L'Excursion des Trois Îles",
+      "legende": "Embarquez pour une excursion inoubliable à travers les trésors naturels de Holbox. Découvrez des îles vierges, des cenotes rafraîchissants et une faune aviaire riche, offrant un aperçu de la biodiversité exceptionnelle de la région.",
+      "lieu": "Isla Holbox et environs",
+      "activites": [
+        "🛥️ <strong>Excursion en Bateau aux Trois Îles</strong>: Partez en bateau pour visiter Isla Pájaros (île aux oiseaux), Isla Pasión (île de la passion) pour ses plages isolées, et le Cenote Yalahau, une source d'eau douce naturelle.",
+        "🏊‍♀️ <strong>Baignade au Cenote Yalahau</strong>: Plongez dans les eaux cristallines et rafraîchissantes de ce cenote à ciel ouvert, réputé pour ses propriétés vivifiantes et son cadre luxuriant."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🐦",
+          "titre": "Observation",
+          "texte": "Isla Pájaros est un sanctuaire pour de nombreuses espèces d'oiseaux, dont les flamants roses. N'oubliez pas vos jumelles pour les observer de près."
+        },
+        {
+          "symbole": "💧",
+          "titre": "Eau douce",
+          "texte": "Le Cenote Yalahau est une source d'eau douce. Pensez à rincer votre peau après la baignade pour éliminer le sel de mer."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🧘‍♀️",
+      "titre": "Détente et Exploration Artistique",
+      "legende": "Après les aventures marines, accordez-vous une journée plus calme pour vous imprégner de l'atmosphère unique de Holbox. Profitez des plages pour vous reposer, explorez l'art de rue vibrant et découvrez la vie locale à travers ses saveurs et ses artisans.",
+      "lieu": "Isla Holbox",
+      "activites": [
+        "🎨 <strong>Découverte du Street Art de Holbox</strong>: Flânez dans les rues du village pour admirer les nombreuses fresques murales colorées qui racontent l'histoire et la culture de l'île. Chaque coin de rue est une galerie à ciel ouvert.",
+        "🍹 <strong>Cours de Cuisine Mexicaine</strong>: Participez à un atelier pour apprendre à préparer des plats typiques de la région. Une expérience gourmande et conviviale pour ramener un peu du Mexique chez vous."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🖼️",
+          "titre": "Art mural",
+          "texte": "Les fresques murales de Holbox sont une véritable attraction. Elles sont souvent inspirées par la nature, la culture maya et la vie marine."
+        },
+        {
+          "symbole": "🌶️",
+          "titre": "Saveurs locales",
+          "texte": "N'hésitez pas à goûter les spécialités locales comme le 'cochinita pibil' ou les 'marquesitas', une sorte de crêpe croustillante."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🐋",
+      "titre": "Nager avec les Géants : Rencontre avec les Requins-Baleines (saisonnier)",
+      "legende": "Vivez une expérience extraordinaire en nageant aux côtés des majestueux requins-baleines, les plus grands poissons du monde. Cette rencontre respectueuse avec la faune marine est un moment fort, suivi d'une exploration des fonds marins colorés de la région.",
+      "lieu": "Isla Holbox et Mer des Caraïbes",
+      "activites": [
+        "🦈 <strong>Excursion Nage avec les Requins-Baleines</strong>: Partez en bateau pour une journée inoubliable à la rencontre de ces doux géants. Nagez en snorkeling à leurs côtés dans le respect de leur environnement (saison de juin à septembre).",
+        "🐠 <strong>Snorkeling dans les Récifs Coralliens</strong>: Après l'excitation de la nage avec les requins-baleines, explorez les récifs coralliens voisins, riches en poissons tropicaux et en vie marine colorée."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Saisonnalité",
+          "texte": "L'excursion avec les requins-baleines n'est possible que de juin à septembre. Si vous voyagez hors saison, une alternative pourrait être la pêche sportive ou une autre excursion marine."
+        },
+        {
+          "symbole": "♻️",
+          "titre": "Éco-responsabilité",
+          "texte": "Choisissez des opérateurs respectueux de l'environnement et de la vie marine. N'utilisez pas de crème solaire non biodégradable avant de nager."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🛶",
+      "titre": "Kayak dans la Mangrove et Coucher de Soleil Magique",
+      "legende": "Explorez la biodiversité unique de la mangrove de Holbox en kayak, une activité paisible qui vous rapproche de la nature. Terminez la journée en beauté en admirant un coucher de soleil spectaculaire, un rituel incontournable sur l'île.",
+      "lieu": "Isla Holbox",
+      "activites": [
+        "🚣‍♀️ <strong>Exploration en Kayak de la Mangrove</strong>: Pagayez silencieusement à travers les tunnels de mangrove, un écosystème vital abritant oiseaux, crocodiles et autres créatures. Une immersion totale dans la nature.",
+        "🌅 <strong>Coucher de Soleil à Punta Cocos</strong>: Rendez-vous à Punta Cocos en fin de journée pour assister à un coucher de soleil époustouflant, où le ciel s'embrase de couleurs vives, reflétées sur les eaux calmes."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🦟",
+          "titre": "Moustiques",
+          "texte": "La mangrove est un habitat pour les moustiques. Prévoyez un répulsif naturel, surtout en fin de journée."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les couchers de soleil à Holbox sont légendaires. N'oubliez pas votre appareil photo pour immortaliser ce spectacle naturel."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "✨",
+      "titre": "Journée Libre et Magie Nocturne : Bioluminescence",
+      "legende": "Profitez d'une journée de détente totale, à votre rythme. Que ce soit sur la plage, au bord de la piscine ou en explorant les boutiques, rechargez vos batteries avant de vivre une expérience nocturne féerique : la bioluminescence, un phénomène naturel éblouissant.",
+      "lieu": "Isla Holbox",
+      "activites": [
+        "🛍️ <strong>Shopping et Détente au Village</strong>: Flânez dans les petites boutiques de souvenirs, trouvez des objets artisanaux uniques ou sirotez un cocktail frais dans un hamac. Profitez de l'ambiance décontractée de l'île.",
+        "✨ <strong>Tour de Bioluminescence en Soirée</strong>: À la tombée de la nuit, partez en kayak ou en voiturette de golf vers des plages isolées. Plongez dans l'eau et observez le plancton lumineux s'illuminer à chaque mouvement, créant un spectacle magique."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🌙",
+          "titre": "Conditions idéales",
+          "texte": "La bioluminescence est plus visible les nuits sans lune. Renseignez-vous sur le calendrier lunaire avant de planifier cette activité."
+        },
+        {
+          "symbole": "🚫",
+          "titre": "Photos",
+          "texte": "Il est très difficile de photographier la bioluminescence sans équipement professionnel. Mieux vaut profiter du moment présent."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": " farewell",
+      "titre": "Derniers Instants de Sérénité et Préparatifs",
+      "legende": "Profitez de cette dernière journée complète sur l'île pour savourer une dernière fois ses charmes. Que ce soit en vous prélassant sur la plage, en vous offrant un massage relaxant ou en dégustant un dernier repas mémorable, imprégnez-vous de l'esprit de Holbox avant votre départ.",
+      "lieu": "Isla Holbox",
+      "activites": [
+        "💆‍♀️ <strong>Matinée Détente et Plage</strong>: Passez la matinée à vous détendre sur la plage principale, à vous baigner dans les eaux chaudes ou à profiter d'un massage en plein air. Laissez-vous bercer par le son des vagues.",
+        "🎁 <strong>Achats de Souvenirs et Dîner d'Adieu</strong>: Procurez-vous les derniers souvenirs artisanaux et savourez un dîner d'adieu dans l'un des restaurants de fruits de mer frais de l'île, avec vue sur la mer."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💸",
+          "titre": "Monnaie locale",
+          "texte": "La monnaie est le peso mexicain (MXN). Les cartes de crédit sont acceptées dans la plupart des établissements, mais avoir du liquide est toujours utile pour les petits commerces."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "L'espagnol est la langue officielle. Apprendre quelques mots de base comme 'Hola' ou 'Gracias' sera très apprécié."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🛫",
+      "titre": "Départ de l'Île Paradisiaque",
+      "legende": "Il est temps de quitter Holbox, mais les souvenirs de ses plages immaculées, de ses couchers de soleil flamboyants et de ses rencontres avec la nature resteront gravés. Reprenez le chemin inverse, le cœur rempli d'images et d'expériences inoubliables.",
+      "lieu": "Isla Holbox - Cancún - Paris",
+      "activites": [
+        "🚢 <strong>Transfert Holbox - Chiquilá - Cancún</strong>: Prenez le ferry de retour vers Chiquilá, puis un transfert terrestre vous mènera directement à l'aéroport international de Cancún pour votre vol retour.",
+        "✈️ <strong>Vol Retour vers Paris</strong>: Embarquez pour votre vol international, la tête pleine de souvenirs de votre escapade paradisiaque à Holbox."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Timing",
+          "texte": "Prévoyez suffisamment de temps pour le transfert et l'enregistrement à l'aéroport de Cancún, car le trajet depuis Holbox peut prendre plusieurs heures."
+        },
+        {
+          "symbole": "🧳",
+          "titre": "Bagages",
+          "texte": "Les chemins sablonneux de Holbox ne sont pas toujours adaptés aux valises à roulettes. Un sac à dos ou une valise souple peut être plus pratique."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1000€/pers (Vol A/R Paris-Cancún, classe économique, hors saison)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "200€/pers (Transferts A/R Cancún-Chiquilá-Holbox, ferry, transports locaux)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "450€/pers (Environ 50€/jour pour 9 jours, repas variés, hors boissons alcoolisées)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "1000€/pers (8 nuits en hôtel de charme/boutique, base chambre double)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "350€/pers (Excursion 3 îles, requin-baleine, bioluminescence, kayak, vélo)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois d'Avril et Mai pour un climat agréable et de Juin à Septembre pour l'observation des requins-baleines.",
+      "symbole": "🌴"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Le climat est tropical. Prévoyez des vêtements légers, un maillot de bain, un chapeau, des lunettes de soleil et de la crème solaire biodégradable.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "La monnaie est le peso mexicain (MXN). Les cartes bancaires sont acceptées mais avoir du liquide est utile pour les petits commerces et les pourboires.",
+      "symbole": "💳"
+    },
+    {
+      "titre": "L'eau du robinet n'est pas potable. Buvez uniquement de l'eau en bouteille. Évitez les glaçons si vous avez un estomac sensible.",
+      "symbole": "💧"
+    },
+    {
+      "titre": "Un adaptateur de type A/B (prises américaines) est nécessaire pour vos appareils électroniques. Le voltage est de 127V.",
+      "symbole": "🔌"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme au Mexique",
+      "titre": "Visit Mexico",
+      "url": "https://www.visitmexico.com/fr",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météo pour Holbox",
+      "titre": "Météo Holbox",
+      "url": "https://www.accuweather.com/fr/mx/holbox/235889/weather-forecast/235889",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Informations sur les ferries pour Holbox",
+      "titre": "9 Hermanos Ferry",
+      "url": "https://www.9hermanos.com.mx/",
+      "symbole": "🚢"
+    }
+  ]
+}
